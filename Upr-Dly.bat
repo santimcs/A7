@@ -1,0 +1,2 @@
+cd ruby
+ruby crt-stock-upper-dly.rb
