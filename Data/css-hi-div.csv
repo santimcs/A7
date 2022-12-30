@@ -1,0 +1,21 @@
+,name,yield,price,target,upside,buy,hold,sell,score,mrkt,sector,subsector,volume,beta
+10,BTSGIF,12.2,3.76,5.64,50,4,1,0,13,SET999,Services,Transportation & Logistics,10.01,0.46
+3,BAM,11.9,15.4,21.09,37,10,1,0,31,SET100,Financials,Finance & Securities,363.92,1.33
+4,SPRC,11.1,10.9,12.69,16,6,6,2,18,SET100,Resources,Energy & Utilities,337.76,0.95
+5,BCP,10.6,30.5,39.17,28,11,3,0,36,SET100,Resources,Energy & Utilities,224.1,0.75
+0,BANPU,9.7,13.4,16.78,25,8,2,0,26,SET50,Resources,Energy & Utilities,1606.13,0.75
+1,TOP,8.2,55.25,65.75,19,14,3,1,42,SET50,Resources,Energy & Utilities,828.34,1.1
+6,STA,7.7,19.0,22.6,19,5,1,0,16,SET100,Agro & Food Industry,Agribusiness,160.97,1.21
+11,NER,7.3,5.9,8.48,44,5,1,0,16,SET999,Agro & Food Industry,Agribusiness,69.57,0.9
+12,WHART,7.3,10.5,12.9,23,4,0,0,12,SET999,Property & Construction,Property Fund & REITs,18.29,0.4
+13,SAT,7.0,20.7,24.23,17,9,0,1,24,SET999,Industrials,Automotive,42.7,1.01
+14,LALIN,6.9,8.85,10.8,22,4,1,0,13,SET999,Property & Construction,Property Development,8.1,0.87
+15,TFG,6.6,5.15,8.85,72,5,0,0,15,SET999,Agro & Food Industry,Food & Beverage,71.53,1.13
+2,PTT,6.3,31.5,43.4,38,11,1,1,31,SET50,Resources,Energy & Utilities,2110.69,0.93
+7,KKP,5.9,74.0,88.0,19,5,0,0,15,SET100,Financials,Banking,356.69,0.77
+16,MC,5.8,10.3,12.1,17,6,0,0,18,SET999,Services,Commerce,6.53,0.6
+17,HTC,5.6,27.5,37.25,35,4,0,0,12,SET999,Agro & Food Industry,Food & Beverage,6.96,0.87
+8,AP,5.5,11.4,14.14,24,14,0,0,42,SET100,Property & Construction,Property Development,173.6,0.75
+9,ORI,5.4,11.2,13.15,17,9,1,0,28,SET100,Property & Construction,Property Development,78.8,1.54
+18,AH,5.2,29.5,41.1,39,7,1,0,22,SET999,Industrials,Automotive,66.06,1.43
+19,ASIAN,5.0,13.2,18.29,39,4,0,0,12,SET999,Agro & Food Industry,Food & Beverage,89.67,0.94

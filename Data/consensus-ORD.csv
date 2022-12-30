@@ -1,0 +1,11 @@
+name,price,target_price,upside,buy,hold,sell,market,sector,subsector,dly_vol,beta,yield
+AH,29.5,41.1,39.32,7.0,1.0,0.0,sSET / SETTHSI    ,Industrials,Automotive,66.06,1.43,5.2
+BANPU,13.4,16.78,25.22,8.0,2.0,0.0,SET50 / SETCLMV / SETTHSI    ,Resources,Energy & Utilities,1606.13,0.75,9.7
+CKP,4.64,6.45,39.01,7.0,1.0,0.0,SET100 / SETCLMV / SETTHSI    ,Resources,Energy & Utilities,82.61,1.07,2.2
+CPF,24.6,31.52,28.13,13.0,1.0,0.0,SET50 / SETCLMV / SETHD / SETTHSI / SETWB    ,Agro & Food Industry,Food & Beverage,624.48,0.83,3.1
+III,13.0,18.25,40.38,6.0,0.0,0.0,sSET    ,Services,Transportation & Logistics,81.55,0.98,3.2
+JMT,65.0,81.61,25.55,9.0,0.0,0.0,SET50    ,Financials,Finance & Securities,752.61,1.61,1.4
+MEGA,45.25,59.25,30.94,8.0,2.0,0.0,SET100 / SETCLMV / SETWB    ,Services,Commerce,164.58,1.07,3.2
+SCB,105.0,143.1,36.29,7.0,0.0,0.0,SET50 / SETCLMV / SETTHSI    ,Financials,Banking,1528.75,1.35,4.2
+SVI,9.45,15.23,61.16,4.0,0.0,0.0,SET    ,Technology,Electronic Components,81.49,2.23,2.5
+TFG,5.15,8.85,71.84,5.0,0.0,0.0,SET    ,Agro & Food Industry,Food & Beverage,71.53,1.13,6.6
