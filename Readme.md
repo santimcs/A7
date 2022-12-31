@@ -4,11 +4,15 @@
 
 ### 1. Create folder A7 under OneDrive
 
-    1. git init
-    2. Add Readme.md
-    3. git status
-    4. git add Readme.md
-    5. git commit -m "Initial commit"
+         git init  
+
+         Add Readme.md  
+
+         git status  
+
+         git add Readme.md  
+
+         git commit -m "Initial commit"
 
 ### 2. Create repository A7
 
