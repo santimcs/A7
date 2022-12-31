@@ -1,49 +1,59 @@
 # A7
 
 ## One time only
-git remote add origin https://github.com/santimcs/A7.git
-git branch -M main
-git push -u origin main
-1. Create folder A7 under OneDrive
-1. git init
-2. Add Readme.md
-3. git status
-4. git add Readme.md
-5. git commit -m "Initial commit"
-2. Create repository A7
-3. From folder A7
-4. Copy batch files to A7
-1. CDD1
-2. CDD2
-3. CDD3
-4. CDD4
-5. CDD5
-6. DlyOut
-7. Ext3
-8. Ext4
-9. Ext5
-10. ImportPrice
-11. ImportSetIndex
-12. ImportSpd_Dly
-13. Inq
-14. Lower
-15. Lwr-Dly
-16. Market0
-17. Market1
-18. Market2
-19. Market3
-20. Morn1
-21. Morn3
-22. Morn4
-23. Morn5
-24. Nite1
-25. Nite2
-26. Nite3
-27. Nite4
-28. Nite5
-29. Ord-Log.bat
-30. Upper.bat
-31. Upr-Dly.bat
+
+### 1.Create folder A7 under OneDrive
+
+    1. git init
+    2. Add Readme.md
+    3. git status
+    4. git add Readme.md
+    5. git commit -m "Initial commit"
+
+### 2.Create repository A7
+
+
+### 3.From folder A7
+
+    git remote add origin https://github.com/santimcs/A7.git  
+
+    git branch -M main  
+
+    git push -u origin main  
+    
+### 4. Copy batch files to A7
+
+    1. CDD1
+    2. CDD2
+    3. CDD3
+    4. CDD4
+    5. CDD5
+    6. DlyOut
+    7. Ext3
+    8. Ext4
+    9. Ext5
+    10. ImportPrice
+    11. ImportSetIndex
+    12. ImportSpd_Dly
+    13. Inq
+    14. Lower
+    15. Lwr-Dly
+    16. Market0
+    17. Market1
+    18. Market2
+    19. Market3
+    20. Morn1
+    21. Morn3
+    22. Morn4
+    23. Morn5
+    24. Nite1
+    25. Nite2
+    26. Nite3
+    27. Nite4
+    28. Nite5
+    29. Ord-Log.bat
+    30. Upper.bat
+    31. Upr-Dly.bat
 
 ### Copy csv files to Data folder  
 
