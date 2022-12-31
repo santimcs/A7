@@ -2,7 +2,7 @@
 
 ## One time only
 
-### 1.Create folder A7 under OneDrive
+### 1. Create folder A7 under OneDrive
 
     1. git init
     2. Add Readme.md
@@ -10,10 +10,10 @@
     4. git add Readme.md
     5. git commit -m "Initial commit"
 
-### 2.Create repository A7
+### 2. Create repository A7
 
 
-### 3.From folder A7
+### 3. From folder A7
 
     git remote add origin https://github.com/santimcs/A7.git  
 
@@ -55,7 +55,7 @@
     30. Upper.bat
     31. Upr-Dly.bat
 
-### Copy csv files to Data folder  
+### 5. Copy csv files to Data folder  
 
     1.  5-day-average
     2. buy-div-price
@@ -78,7 +78,7 @@
    19. price-uploads
 
 
-### Copy ruby programs to Ruby folder
+### 6. Copy ruby programs to Ruby folder
 
     20. rank-div-market
     21. setindex
@@ -114,7 +114,7 @@
     22. stock_inq
 
 
-### Copy Daily process
+### 7. Copy Daily process
 
     3. 120-Orders
     4. 125-Orders - Short Version
