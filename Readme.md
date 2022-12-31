@@ -57,39 +57,38 @@
 
 ### 5. Copy csv files to Data folder  
 
-    1.  5-day-average
-    2. buy-div-price
-    3. consensus
-    4. consensus-ORD
-    5. css-hi-div
-    6. dailies
-    7. daily_out
-    8. daily-sales
-    9. daily-watch-list
-   10. extremes
-   11. hi-dividend
-   12. monitors
-   13. name-temp
-   14. name-tmp
-    15. name-ttl
-    16. orders
-    17. orders-log
-    18. price
-   19. price-uploads
-
+        1. 5-day-average
+        2. buy-div-price
+        3. consensus
+        4. consensus-ORD
+        5. css-hi-div
+        6. dailies
+        7. daily_out
+        8. daily-sales
+        9. daily-watch-list
+       10. extremes
+       11. hi-dividend
+       12. monitors
+       13. name-temp
+       14. name-tmp
+        15. name-ttl
+        16. orders
+        17. orders-log
+        18. price
+       19. price-uploads
+       20. rank-div-market
+       21. setindex
+        22. spd_dly
+        23. stocks
+        24. stocks-all
+        25. temp
+        26. yearly-price-by-name
+        27. ytd-profit
+        28. name-ttl.xlsx
+        29. name-xtr.xlsx
 
 ### 6. Copy ruby programs to Ruby folder
 
-    20. rank-div-market
-    21. setindex
-    22. spd_dly
-    23. stocks
-    24. stocks-all
-    25. temp
-    26. yearly-price-by-name
-    27. ytd-profit
-    28. name-ttl.xlsx
-    29. name-xtr.xlsx
     1. candidate
     2. crt-consensus-fm-iaa
     3. crt-prices-fm-p01
@@ -116,13 +115,13 @@
 
 ### 7. Copy Daily process
 
-    3. 120-Orders
-    4. 125-Orders - Short Version
-    5. 160-Calculate Desired Purchase...
-    6. 210-Break 52 Weeks High
-    7. 220-Price in CSV format
-    8. 225-Window Dressing
-    9. 230-Display Dailies by Change...
-    10. 250-Buy Alert
-    11. 260-Sell Alert
-    12. 270-Daily Output
+    1. 120-Orders
+    2. 125-Orders - Short Version
+    3. 160-Calculate Desired Purchase...
+    4. 210-Break 52 Weeks High
+    5. 220-Price in CSV format
+    6. 225-Window Dressing
+    7. 230-Display Dailies by Change...
+    8. 250-Buy Alert
+    9. 260-Sell Alert
+    10. 270-Daily Output
