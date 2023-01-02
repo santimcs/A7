@@ -1,2 +1,1 @@
-cd ruby
-ruby crt-stock-lower.rb
+ruby ruby\crt-stock-lower.rb

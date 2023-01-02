@@ -1,5 +1,5 @@
 require 'date'
-load './my_utils.rb'
+load './ruby/my_utils.rb'
 
 puts "Enter stock name"
 stock_name = gets.chomp.upcase
