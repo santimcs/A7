@@ -132,7 +132,7 @@ fi.each do |line|
 	end
 	ary[8] = float_field
 	ary[9] = array[9]
-	ary[10] = array[10]
+	ary[10] = strip_comma(array[10])
 	ary[11] = array[11]	
 	ary[12] = chgamt
 	ary[13] = chgpct.chop
