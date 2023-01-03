@@ -1,3 +1,3 @@
 name,percent,status,fm_price,to_price,market,fm_date,bdays,max_price,min_price
-PTT,7.26,O,31.0,33.25,SET50,2022-12-21,8,33.5,31.0
-SYNEX,3.14,I,15.9,16.4,SET100,2022-12-28,3,16.6,16.0
+SYNEX,5.03,I,15.9,16.7,SET100,2022-12-28,5,17.0,3.14
+MAKRO,3.18,I,39.25,40.5,SET,2022-12-28,5,40.5,1.91
