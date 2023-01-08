@@ -1,3 +1,1 @@
-CD Ruby
-
-ruby order-log.rb
+ruby ruby\order-log.rb

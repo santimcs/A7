@@ -1,6 +1,7 @@
 name,price,target_price,upside,buy,hold,sell,market,sector,subsector,dly_vol,beta,yield
-BANPU,13.7,17.82,30.07,5.0,1.0,0.0,SET50 / SETCLMV / SETTHSI    ,Resources,Energy & Utilities,1587.48,0.76,9.5
-CKP,4.56,6.23,36.62,5.0,1.0,0.0,SET100 / SETCLMV / SETTHSI    ,Resources,Energy & Utilities,82.32,1.06,2.2
-CPF,24.8,31.28,26.13,11.0,1.0,0.0,SET50 / SETCLMV / SETHD / SETTHSI / SETWB    ,Agro & Food Industry,Food & Beverage,622.52,0.8,2.9
-SCB,107.0,145.3,35.79,6.0,0.0,0.0,SET50 / SETCLMV / SETTHSI    ,Financials,Banking,1502.89,1.33,4.3
-TFG,5.15,8.68,68.54,4.0,0.0,0.0,SET    ,Agro & Food Industry,Food & Beverage,70.6,1.08,6.8
+AH,28.75,40.13,39.58,5.0,1.0,0.0,sSET / SETTHSI    ,Industrials,Automotive,78.12,1.47,5.3
+CKP,4.6,6.4,39.13,3.0,0.0,0.0,SET100 / SETCLMV / SETTHSI    ,Resources,Energy & Utilities,42.95,1.04,2.4
+CPF,24.2,31.35,29.55,2.0,0.0,0.0,SET50 / SETCLMV / SETHD / SETTHSI / SETWB    ,Agro & Food Industry,Food & Beverage,503.17,0.76,3.2
+GFPT,12.7,17.58,38.43,5.0,0.0,0.0,SETTHSI    ,Agro & Food Industry,Agribusiness,49.45,0.58,2.7
+SCB,110.5,143.4,29.77,5.0,0.0,0.0,SET50 / SETCLMV / SETTHSI    ,Financials,Banking,1590.69,1.31,4.4
+TFG,5.15,8.0,55.34,3.0,0.0,0.0,SET    ,Agro & Food Industry,Food & Beverage,31.64,1.03,5.4
