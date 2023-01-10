@@ -4,19 +4,12 @@ load './ruby/my_utils.rb'
 puts "Enter stock name"
 stock_name = gets.chomp.upcase
 
-# file_in   = '..\\data\\Yearly-Price-by-Name.csv'
-# file_temp = '..\\data\\temp.csv'
-# file_out =  "..\\CSV\\#{stock_name}-lower.csv"
-
 # Get the current script's directory
 current_dir = File.dirname(__FILE__)
-#puts current_dir
 # Construct the file path to the input folder
 input_dir = File.join(current_dir, '..', 'Data')
-#puts input_dir
 # Construct the file path to the output folder
 output_dir = File.join(current_dir, '..', 'CSV')
-#puts output_dir
 
 # Construct the file path to the input file
 file_in = File.join(input_dir, "Yearly-Price-by-Name.csv")
@@ -106,7 +99,9 @@ fi.each do |line|
 				ary_out[7] = ((to_price.to_f - fm_price.to_f)/fm_price.to_f*100).round(2)
 				spreads = num_of_spread(fm_price,to_price)
 				ary_out[8] = spreads.round	
-				ary_out[9] = (ary_out[8]/ary_out[3]).round	
+				if ary_out[3] != 0
+					ary_out[9] = (ary_out[8]/ary_out[3]).round	
+				end
 				ary_out[10] = max_price
 				ary_out[11] = min_price
 				ary_out[12] = ttl_qty
@@ -126,10 +121,8 @@ fi.each do |line|
 			to_date = date
 			fm_price = price
 			to_price = price  
-		#	max_price = maxp
-		#	min_price = minp
 		    qty = 0  
-		end 	
+		end 	# price < to_price
 
         if (maxp.to_f > max_price.to_f)
             max_price = maxp

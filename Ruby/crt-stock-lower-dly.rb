@@ -19,7 +19,7 @@ output_dir = File.join(current_dir, '..', 'CSV')
 #puts output_dir
 
 # Construct the file path to the input file
-file_in = File.join(input_dir, "Yearly-Price-by-Name.csv")
+file_in = File.join(input_dir, "Quarterly-Price-by-Name.csv")
 # Construct the file path to the temp file
 file_temp = File.join(input_dir, "temp.csv")
 # Construct the file path to the output file
