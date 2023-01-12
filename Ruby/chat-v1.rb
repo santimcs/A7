@@ -2,27 +2,23 @@ require 'csv'
 
 def summarize_prices(input_file, output_file)
     previous_row = nil
-    previous_trend = nil
+    previous_trend = 'First Record'
     start_date = nil
     start_price = nil
     trend = nil
+
     CSV.open(output_file, 'w') do |output|
     output << %w[name from_date to_date from_price to_price trend]
-    str = %w[name from_date to_date from_price to_price trend]
+    str = %w[name from_date to_date from_price to_price trend].join(',')
     puts str
+
       CSV.foreach(input_file) do |row|
 
-        if previous_row.nil? # process for 1st rcd
+        if previous_row.nil? # process for 1st row
           start_date = row[1]
           start_price = row[2]
 
-          # if row[2] > start_price
-          #     trend = "Upward"
-          # elsif row[2] < start_price
-          #     trend = "Downward"
-          # end
-
-        else # process for not 1st rcd
+        else # process for 2nd row onward
 
           if row[2] > previous_row[2]
               trend = "Upward"
@@ -32,8 +28,9 @@ def summarize_prices(input_file, output_file)
 
           if trend != previous_trend
               output << [previous_row[0], start_date, previous_row[1], start_price, previous_row[2], previous_trend]
-              str = [previous_row[0], start_date, previous_row[1], start_price, previous_row[2], previous_trend]
-              puts str
+              output_string = [previous_row[0], start_date, previous_row[1], start_price, previous_row[2], previous_trend].join(',')
+              puts output_string
+              
               start_date = row[1]
               start_price = row[2]
               previous_trend = trend
@@ -45,15 +42,16 @@ def summarize_prices(input_file, output_file)
 
         previous_row = row  # do every row
       end # end of foreach row
-    # process when there is no more row
+
+    # process after last row
     if previous_row != nil
         output << [previous_row[0], start_date, previous_row[1], start_price, previous_row[2], previous_trend]
-        str = [previous_row[0], start_date, previous_row[1], start_price, previous_row[2], previous_trend]
-        puts str
-
+        output_string = [previous_row[0], start_date, previous_row[1], start_price, previous_row[2], previous_trend].join(',')
+        puts output_string
     end
     
-  end 
+  end # end of output_file
+
 end
 
 # Get the current script's directory
@@ -70,6 +68,11 @@ file_temp = File.join(input_dir, "temp.csv")
 # Construct the file path to the output file
 output_file = File.join(output_dir, "output.csv")
 
-# input_file = 'input.csv'
-# output_file = 'output.csv'
+puts input_file
 summarize_prices(input_file, output_file)
+
+new_output_file = File.join(output_dir, "summary.csv")
+File.rename(output_file, new_output_file)
+puts new_output_file
+
+
