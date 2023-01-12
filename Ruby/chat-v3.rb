@@ -1,6 +1,7 @@
 require 'csv'
 
 def summarize_prices(input_file, output_file)
+    previous_name = nil
     previous_row = nil
     previous_trend = 'First Record'
     start_date = nil
@@ -19,6 +20,14 @@ def summarize_prices(input_file, output_file)
                 start_price = row[2]
             end
 
+            if !previous_row.nil? # process for 2nd row
+                if row[0] != previous_name
+                    start_date = row[1]
+                    start_price = row[2]
+                    trend = nil
+                end
+            end            
+
             if !previous_row.nil? # process for 2nd row onward
 
                 if row[2] > previous_row[2]
@@ -27,9 +36,14 @@ def summarize_prices(input_file, output_file)
                     trend = "Downward"
                 end
 
+                if row[0] != previous_name
+                    previous_trend = 'First record'
+                    previous_name = row[0]
+                end
+
                 if trend != previous_trend
-                    output << [previous_row[0], start_date, previous_row[1], start_price, previous_row[2], previous_trend]
-                    output_string = [previous_row[0], start_date, previous_row[1], start_price, previous_row[2], previous_trend].join(',')
+                    output << [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend]
+                    output_string = [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend].join(',')
                     puts output_string
                     
                     start_date = row[1]
@@ -42,12 +56,13 @@ def summarize_prices(input_file, output_file)
             end # end of process for 2nd row onward
 
             previous_row = row  # do every row
+            previous_name = row[0]  # do every row
         end # end of foreach row
 
         # process after last row
         if previous_row != nil
-            output << [previous_row[0], start_date, previous_row[1], start_price, previous_row[2], previous_trend]
-            output_string = [previous_row[0], start_date, previous_row[1], start_price, previous_row[2], previous_trend].join(',')
+            output << [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend]
+            output_string = [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend].join(',')
             puts output_string
         end
     
