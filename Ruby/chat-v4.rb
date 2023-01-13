@@ -29,18 +29,20 @@ def summarize_prices(input_file, output_file)
                     puts output_string                    
                     start_date = row[1]
                     start_price = row[2]
-                    trend = nil
+                    trend = 'First record'
                 end
 
             end            
 
             if !previous_row.nil? # process for 2nd row onward
 
-                if row[2] > previous_row[2]
-                    trend = "Upward"
-                elsif row[2] < previous_row[2]
-                    trend = "Downward"
-                end
+                # if row[0] != previous_name
+                    if row[2] > previous_row[2]
+                        trend = "Upward"
+                    elsif row[2] < previous_row[2]
+                        trend = "Downward"
+                    end
+                #  end
 
                 if trend != previous_trend
                     if row[0] == previous_name
