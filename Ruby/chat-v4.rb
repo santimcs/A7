@@ -29,19 +29,19 @@ def summarize_prices(input_file, output_file)
                     puts output_string                    
                     start_date = row[1]
                     start_price = row[2]
-                    trend = 'First record'
+                    trend = 'First Record'
                 end
 
             end            
 
             if !previous_row.nil? # process for 2nd row onward
 
-                    if row[2] > previous_row[2]
-                        trend = "Upward"
-                    end
-                    if row[2] < previous_row[2]
-                        trend = "Downward"
-                    end
+                if row[2] > previous_row[2]
+                    trend = "Upward"
+                end
+                if row[2] < previous_row[2]
+                    trend = "Downward"
+                end
 
                 if trend != previous_trend
                     if row[0] == previous_name
@@ -69,7 +69,7 @@ def summarize_prices(input_file, output_file)
     
     end # end of output_file
 
-end
+end # end of function
 
 # Get the current script's directory
 current_dir = File.dirname(__FILE__)

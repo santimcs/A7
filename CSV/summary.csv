@@ -1,7 +1,7 @@
 name,from_date,to_date,from_price,to_price,trend,no
 IVL,2023-01-09,2023-01-09,38.5,38.5,First Record,2
 IVL,2023-01-10,2023-01-12,41.25,41.5,Upward,5
-JMART,2023-01-09,2023-01-09,41.5,41.5,First record,6
+JMART,2023-01-09,2023-01-09,41.5,41.5,First Record,6
 JMART,2023-01-10,2023-01-12,42.0,42.5,Upward,9
 SINGER,2023-01-09,2023-01-10,29.75,29.25,Downward,11
 SINGER,2023-01-11,2023-01-12,29.5,30.0,Upward,13
