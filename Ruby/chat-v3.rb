@@ -7,14 +7,15 @@ def summarize_prices(input_file, output_file)
     start_date = nil
     start_price = nil
     trend = nil
+    no = 0
 
     CSV.open(output_file, 'w') do |output|
-        output << %w[name from_date to_date from_price to_price trend]
-        str = %w[name from_date to_date from_price to_price trend].join(',')
+        output << %w[name from_date to_date from_price to_price trend no]
+        str = %w[name from_date to_date from_price to_price trend no].join(',')
         puts str
 
         CSV.foreach(input_file) do |row|
-
+            no = no + 1
             if previous_row.nil? # process for 1st row
                 start_date = row[1]
                 start_price = row[2]
@@ -42,8 +43,8 @@ def summarize_prices(input_file, output_file)
                 end
 
                 if trend != previous_trend
-                    output << [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend]
-                    output_string = [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend].join(',')
+                    output << [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend, no]
+                    output_string = [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend, no].join(',')
                     puts output_string
                     
                     start_date = row[1]
@@ -61,8 +62,8 @@ def summarize_prices(input_file, output_file)
 
         # process after last row
         if previous_row != nil
-            output << [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend]
-            output_string = [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend].join(',')
+            output << [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend, no]
+            output_string = [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend, no].join(',')
             puts output_string
         end
     
