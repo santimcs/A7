@@ -24,10 +24,14 @@ def summarize_prices(input_file, output_file)
 
             if !previous_row.nil? # process for 2nd row onward
                 if row[0] != previous_name
+                    output << [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend, no]
+                    output_string = [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend, no].join(',')
+                    puts output_string                    
                     start_date = row[1]
                     start_price = row[2]
                     trend = nil
                 end
+
             end            
 
             if !previous_row.nil? # process for 2nd row onward
@@ -38,18 +42,15 @@ def summarize_prices(input_file, output_file)
                     trend = "Downward"
                 end
 
-                # if row[0] != previous_name
-                #     previous_trend = 'First record'
-                #     previous_name = row[0]
-                # end
-
                 if trend != previous_trend
-                    output << [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend, no]
-                    output_string = [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend, no].join(',')
-                    puts output_string
-                    
-                    # start_date = row[1]
-                    # start_price = row[2]
+                    if row[0] == previous_name
+                        output << [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend, no]
+                        output_string = [previous_name, start_date, previous_row[1], start_price, previous_row[2], previous_trend, no].join(',')
+                        puts output_string
+                    end
+
+                    start_date = row[1]
+                    start_price = row[2]
                     previous_trend = trend
                 end
 
