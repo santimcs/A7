@@ -55,8 +55,6 @@ def number_of_spread(minp,maxp)
                     spd1 = ((boundary - minp) / 0.02).round()
                     spd2 = ((maxp - boundary) / div).round()
                     spd = spd1 + spd2                      
-                    # spd = (boundary - minp) / 0.02
-                    # spd += (maxp - boundary) / div
                 else
                     spd = (gap/div).round()
                 end            
@@ -70,8 +68,6 @@ def number_of_spread(minp,maxp)
                 boundary = div * 100
 
                 if minp < boundary    #continue
-                    # spd = (boundary - minp) / 0.05
-                    # spd += (maxp - boundary) / div
                     spd1 = ((boundary - minp) / 0.05).round()
                     spd2 = ((maxp - boundary) / div).round()
                     spd = spd1 + spd2
