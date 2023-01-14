@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'nokogiri'
 require 'open-uri'
-load './my_utils.rb'
+load './ruby/my_utils.rb'
 
 def number_of_spread(minp,maxp)
     div = 0.0 # divider for calculating the number of spreads
@@ -134,9 +134,25 @@ def number_of_spread(minp,maxp)
     return spreads
 end
 
-file_in   = '..\data\orders.csv'
-file_out   = '..\data\orders-log.csv'
+# file_in   = '..\data\orders.csv'
+# file_out   = '..\data\orders-log.csv'
 file_out2   = 'C:\Users\User\Dropbox\orders-log.csv'
+
+# Get the current script's directory
+current_dir = File.dirname(__FILE__)
+#puts current_dir
+# Construct the file path to the input folder
+input_dir = File.join(current_dir, '..', 'Data')
+#puts input_dir
+# Construct the file path to the output folder
+output_dir = File.join(current_dir, '..', 'Data')
+#puts output_dir
+
+# Construct the file path to the output file
+file_out = File.join(output_dir, "orders-log.csv")
+# Construct the file path to the input file
+file_in = File.join(input_dir, "orders.csv")
+
 # ary_in[0] = Trade          
 # ary_in[1] = Stock Name 
 # ary_in[2] = Qty
