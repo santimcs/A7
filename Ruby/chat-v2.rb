@@ -7,11 +7,12 @@ def summarize_prices(input_file, output_file)
     start_date = nil
     start_price = nil
     trend = nil
+    nbr = 0
     days = 0
 
     CSV.open(output_file, 'w') do |output|
-    output << %w[name from_date to_date days from_price to_price trend]
-    header = %w[name from_date to_date days from_price to_price trend].join(',')
+    output << %w[name from_date to_date days from_price to_price trend nbr]
+    header = %w[name from_date to_date days from_price to_price trend nbr].join(',')
     puts header
 
       CSV.foreach(input_file) do |row|
@@ -30,8 +31,8 @@ def summarize_prices(input_file, output_file)
 
           if trend != previous_trend
               days = calc_days(start_date, previous_row[1])  
-              output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], previous_trend]
-              output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], previous_trend].join(',')
+              output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], previous_trend, nbr]
+              output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], previous_trend, nbr].join(',')
               puts output_string
               
               start_date = row[1]
@@ -49,8 +50,8 @@ def summarize_prices(input_file, output_file)
     # process after last row
     if previous_row != nil
         days = calc_days(start_date, previous_row[1])  
-        output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], previous_trend]
-        output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], previous_trend].join(',')
+        output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], previous_trend, nbr]
+        output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], previous_trend, nbr].join(',')
         puts output_string
     end
     
