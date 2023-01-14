@@ -125,7 +125,7 @@ def number_of_spread(minp,maxp)
             end         
         end 
     end
-    spreads = (spd * mult).to_i
+    spreads = (spd * mult).to_i + 1
     return spreads
 end
 
@@ -179,7 +179,7 @@ def summarize_prices(input_file, output_file)
                     avg = (spd/days).round
                     output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty]
                     output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, previous_trend, nbr, commas(ttl_qty)].join('|')
-                          puts output_string                    
+                    puts output_string                    
                     start_date = row[1]
                     start_price = row[2]
                     max_price = row[4]
@@ -252,8 +252,8 @@ current_dir = File.dirname(__FILE__)
 # Construct the file path to the input folder
 input_dir = File.join(current_dir, '..', 'Data')
 # Construct the file path to the output folder
-output_dir = File.join(current_dir, '..', 'CSV')
-
+# output_dir = File.join(current_dir, '..', 'Data')
+output_dir = 'C:\Ruby\port_lite\db'
 # Construct the file path to the input file
 input_file = File.join(input_dir, "Yearly-Price-by-Name.csv")
 # Construct the file path to the temp file

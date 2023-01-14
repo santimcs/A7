@@ -157,8 +157,8 @@ def summarize_prices(input_file, output_file)
     avg = 0    
 
     CSV.open(output_file, 'w') do |output|
-        output << %w[name from_date to_date days from_price to_price diff pct spd avg ttl_qty max_price min_price]
-        header = %w[name fm_date to_date days fm_price to_price diff pct spd avg ttl_qty max_price min_price trend nbr].join(',')
+        output << %w[name from_date to_date days from_price to_price diff pct spd avg max_price min_price ttl_qty]
+        header = %w[name fm_date to_date days fm_price to_price diff pct spd avg max_price min_price trend nbr ttl_qty].join(',')
         puts header
 
         CSV.foreach(input_file) do |row|
@@ -177,9 +177,9 @@ def summarize_prices(input_file, output_file)
                     diff = (previous_row[2].to_f - start_price.to_f).round(2)
                     pct = ((previous_row[2].to_f - start_price.to_f)/start_price.to_f*100).round(2)
                     avg = (spd/days).round
-                    output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, ttl_qty, max_price, min_price]
-                    output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, commas(ttl_qty), max_price, min_price, previous_trend, nbr].join(',')
-                          puts output_string                    
+                    output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty]
+                    output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, previous_trend, nbr, commas(ttl_qty)].join('|')
+                    puts output_string                    
                     start_date = row[1]
                     start_price = row[2]
                     max_price = row[4]
@@ -205,8 +205,8 @@ def summarize_prices(input_file, output_file)
                             diff = (previous_row[2].to_f - start_price.to_f).round(2)
                             pct = ((previous_row[2].to_f - start_price.to_f)/start_price.to_f*100).round(2)
                             avg = (spd/days).round
-                            output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg,   ttl_qty, max_price, min_price]
-                            output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg,   commas(ttl_qty), max_price, min_price, previous_trend, nbr].join(',')
+                            output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty]
+                            output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, previous_trend, nbr, commas(ttl_qty)].join('|')
                             puts output_string
                         end
 
@@ -239,8 +239,8 @@ def summarize_prices(input_file, output_file)
         diff = (previous_row[2].to_f - start_price.to_f).round(2)
         pct = ((previous_row[2].to_f - start_price.to_f)/start_price.to_f*100).round(2)
         avg = (spd/days).round
-        output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg,   ttl_qty, max_price, min_price]
-        output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg,   commas(ttl_qty), max_price, min_price, previous_trend, nbr].join(',')
+        output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty]
+        output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, previous_trend, nbr, commas(ttl_qty)].join('|')
         puts output_string
     
     end # end of output_file
