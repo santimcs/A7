@@ -125,7 +125,7 @@ def number_of_spread(minp,maxp)
             end         
         end 
     end
-    spreads = (spd * mult).to_i
+    spreads = (spd * mult).to_i 
     return spreads
 end
 
@@ -138,7 +138,7 @@ def calc_days(start_date, end_date)
         business_days = business_days + 1 unless date.saturday? or date.sunday?
         date = date - 1.day
     end
-    business_days + 1
+    business_days 
 end
 
 def summarize_prices(input_file, output_file)
@@ -157,7 +157,7 @@ def summarize_prices(input_file, output_file)
     avg = 0    
 
     CSV.open(output_file, 'w') do |output|
-        output << %w[name from_date to_date days from_price to_price diff pct spd avg max_price min_price ttl_qty]
+        output << %w[name from_date to_date days from_price to_price diff pct spd avg max_price min_price ttl_qty trend nbr]
         header = %w[name fm_date to_date days fm_price to_price diff pct spd avg max_price min_price trend nbr ttl_qty].join(',')
         puts header
 
@@ -176,8 +176,12 @@ def summarize_prices(input_file, output_file)
                     spd = number_of_spread(start_price.to_f,previous_row[2].to_f)
                     diff = (previous_row[2].to_f - start_price.to_f).round(2)
                     pct = ((previous_row[2].to_f - start_price.to_f)/start_price.to_f*100).round(2)
-                    avg = (spd/days).round
-                    output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty]
+                    if days != 0
+                        avg = (spd/days).round
+                    else
+                        avg = spd
+                    end
+                    output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty, previous_trend, nbr]
                     output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, previous_trend, nbr, commas(ttl_qty)].join('|')
                     puts output_string                    
                     start_date = row[1]
@@ -204,8 +208,12 @@ def summarize_prices(input_file, output_file)
                             spd = number_of_spread(start_price.to_f,previous_row[2].to_f)
                             diff = (previous_row[2].to_f - start_price.to_f).round(2)
                             pct = ((previous_row[2].to_f - start_price.to_f)/start_price.to_f*100).round(2)
-                            avg = (spd/days).round
-                            output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty]
+                            if days != 0
+                                avg = (spd/days).round
+                            else
+                                avg = spd
+                            end                            
+                            output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty, previous_trend, nbr]
                             output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, previous_trend, nbr, commas(ttl_qty)].join('|')
                             puts output_string
                         end
@@ -238,8 +246,12 @@ def summarize_prices(input_file, output_file)
         spd = number_of_spread(start_price.to_f,previous_row[2].to_f)
         diff = (previous_row[2].to_f - start_price.to_f).round(2)
         pct = ((previous_row[2].to_f - start_price.to_f)/start_price.to_f*100).round(2)
-        avg = (spd/days).round
-        output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty]
+        if days != 0
+            avg = (spd/days).round
+        else
+            avg = spd
+        end
+        output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty, previous_trend, nbr]
         output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, previous_trend, nbr, commas(ttl_qty)].join('|')
         puts output_string
     
@@ -253,7 +265,7 @@ current_dir = File.dirname(__FILE__)
 input_dir = File.join(current_dir, '..', 'Data')
 # Construct the file path to the output folder
 output_dir = File.join(current_dir, '..', 'Data')
-
+# output_dir = 'C:\Ruby\port_lite\db'
 # Construct the file path to the input file
 input_file = File.join(input_dir, "Quarterly-Price-by-Name.csv")
 # Construct the file path to the temp file
