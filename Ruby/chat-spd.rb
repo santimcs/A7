@@ -142,7 +142,7 @@ def calc_days(start_date, end_date)
         business_days = business_days + 1 unless date.saturday? or date.sunday?
         date = date - 1.day
     end
-    business_days + 1
+    business_days += 1
 end
 
 def summarize_prices(input_file, output_file)
@@ -178,7 +178,7 @@ def summarize_prices(input_file, output_file)
                     start_date = row[1]
                     start_price = row[2]
                     ttl_qty = 0
-                    trend = nil
+                    # trend = nil # this statement causes one incorrect nil for each group of data 
                 end
 
                 if row[0] == previous_row[0]    # same group

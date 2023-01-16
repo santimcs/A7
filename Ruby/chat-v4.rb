@@ -27,7 +27,7 @@ def summarize_prices(input_file, output_file)
                     puts output_string                    
                     start_date = row[1]
                     start_price = row[2]
-                    trend = nil
+                    # trend = nil # this statement causes one incorrect nil for each group of data 
                 end
 
                 if row[0] == previous_row[0]    # same group
