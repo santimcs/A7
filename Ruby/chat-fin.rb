@@ -163,30 +163,33 @@ def summarize_prices(input_file, output_file)
 
         CSV.foreach(input_file) do |row|
             nbr = nbr + 1
-            if previous_row.nil? # process for 1st row
+            if nbr == 1 # process for 1st row
                 start_date = row[1]
                 start_price = row[2]
                 max_price = row[4]
                 min_price = row[5]            
             end
 
-            if !previous_row.nil? # process for 2nd row onward
+            if nbr > 1 # process for 2nd row onward
+
                 if row[0] != previous_row[0]    # group break
                     days = calc_days(start_date, previous_row[1])  
                     spd = number_of_spread(start_price.to_f,previous_row[2].to_f)
                     diff = (previous_row[2].to_f - start_price.to_f).round(2)
                     pct = ((previous_row[2].to_f - start_price.to_f)/start_price.to_f*100).round(2)
                     avg = (spd/days).round
+                   
                     output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty]
                     output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, previous_trend, nbr, commas(ttl_qty)].join('|')
-                    puts output_string                    
+                    puts output_string 
+
                     start_date = row[1]
                     start_price = row[2]
                     max_price = row[4]
                     min_price = row[5] 
                     ttl_qty = 0
                     # trend = nil # this statement causes one incorrect nil for each group of data 
-                end
+                end # group break
 
                 if row[0] == previous_row[0]    # same group
 
@@ -198,32 +201,30 @@ def summarize_prices(input_file, output_file)
                     end
 
                     if trend != previous_trend
-
-                        if row[0] == previous_row[0]
-                            days = calc_days(start_date, previous_row[1])  
-                            spd = number_of_spread(start_price.to_f,previous_row[2].to_f)
-                            diff = (previous_row[2].to_f - start_price.to_f).round(2)
-                            pct = ((previous_row[2].to_f - start_price.to_f)/start_price.to_f*100).round(2)
-                            avg = (spd/days).round
-                            output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty]
-                            output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, previous_trend, nbr, commas(ttl_qty)].join('|')
-                            puts output_string
-                        end
-
+                        # if row[0] == previous_row[0]
+                        days = calc_days(start_date, previous_row[1])  
+                        spd = number_of_spread(start_price.to_f,previous_row[2].to_f)
+                        diff = (previous_row[2].to_f - start_price.to_f).round(2)
+                        pct = ((previous_row[2].to_f - start_price.to_f)/start_price.to_f*100).round(2)
+                        avg = (spd/days).round
+                        output << [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, ttl_qty]
+                        output_string = [previous_row[0], start_date, previous_row[1], days, start_price, previous_row[2], diff, pct, spd, avg, max_price, min_price, previous_trend, nbr, commas(ttl_qty)].join('|')
+                        puts output_string
+                        # end
                         start_date = row[1]
                         start_price = row[2]
                         max_price = row[4]
                         min_price = row[5] 
                         ttl_qty = 0
                         previous_trend = trend
-                    end
+                    end # trend != previous_trend
 
-                end
+                end # same group
 
             end # end of process for 2nd row onward
             # do every row
             previous_row = row  
-            ttl_qty = ttl_qty + row[3].to_i
+            ttl_qty += row[3].to_i
 
             if row[4] > max_price
                 max_price = row[4]

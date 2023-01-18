@@ -1,3 +1,3 @@
-ruby ruby\crt-dailies.rb
-
 echo %cd%
+
+ruby ruby\crt-summary.rb
