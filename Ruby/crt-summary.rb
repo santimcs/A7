@@ -158,7 +158,7 @@ def summarize_prices(input_file, output_file)
 
     CSV.open(output_file, 'w') do |output|
         output << %w[name from_date to_date days from_price to_price diff pct spd avg max_price min_price ttl_qty trend nbr]
-        header = %w[name fm_date to_date days fm_price to_price diff pct spd avg max_price min_price trend nbr ttl_qty].join(',')
+        header = %w[name fm_date to_date days fm_price to_price diff pct spd avg max_price min_price trend nbr ttl_qty].join('|')
         puts header
 
         CSV.foreach(input_file) do |row|
