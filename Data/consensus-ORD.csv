@@ -1,6 +1,6 @@
 name,price,target_price,upside,buy,hold,sell,market,sector,subsector,dly_vol,beta,yield
-CKP,4.7,6.6,40.43,2.0,0.0,0.0,SET100 / SETCLMV / SETTHSI    ,Resources,Energy & Utilities,52.33,1.06,2.6
-CPF,24.2,31.35,29.55,2.0,0.0,0.0,SET50 / SETCLMV / SETHD / SETTHSI / SETWB    ,Agro & Food Industry,Food & Beverage,481.35,0.79,3.2
-JMART,42.25,59.0,39.64,1.0,0.0,0.0,SET50    ,Technology,Information & Communication Technology,258.95,2.06,2.1
-MEGA,49.0,62.7,27.96,5.0,0.0,0.0,SET100 / SETCLMV / SETTHSI / SETWB    ,Services,Commerce,217.94,1.14,3.1
-SCB,111.5,140.0,25.56,6.0,0.0,0.0,SET50 / SETCLMV / SETTHSI    ,Financials,Banking,1599.11,1.3,4.6
+CK,23.7,30.11,27.05,3.0,0.0,0.0,SET100 / SETCLMV    ,Property & Construction,Construction Services,167.92,0.82,1.7
+CKP,4.64,6.6,42.24,2.0,0.0,0.0,SET100 / SETCLMV / SETTHSI    ,Resources,Energy & Utilities,60.77,1.04,2.6
+CPF,24.1,31.35,30.08,2.0,0.0,0.0,SET50 / SETCLMV / SETHD / SETTHSI / SETWB    ,Agro & Food Industry,Food & Beverage,421.03,0.77,3.2
+GFPT,13.2,17.4,31.82,4.0,0.0,0.0,SETTHSI    ,Agro & Food Industry,Agribusiness,76.82,0.69,2.7
+MEGA,49.75,62.7,26.03,5.0,0.0,0.0,SET100 / SETCLMV / SETTHSI / SETWB    ,Services,Commerce,178.57,1.14,3.0
