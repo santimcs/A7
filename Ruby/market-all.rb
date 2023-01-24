@@ -126,10 +126,8 @@ inp_digit = process[0].to_i
 
 # Get the current script's directory
 current_dir = File.dirname(__FILE__)
-#puts current_dir
 # Construct the file path to the input folder
 input_dir = File.join(current_dir, '..', 'Data')
-#puts input_dir
 # Construct the file path to the input file
 file_in = File.join(input_dir, "orders.csv")
 

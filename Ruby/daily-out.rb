@@ -1,12 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
+require 'fileutils'
 load './ruby/my_utils.rb'
-
-# file_in   = '..\data\daily-sales.csv'
-file_out   = 'c:\ruby\port_lite\db\daily_out.csv'
-# file_out2   = 'c:\A8\data\daily_out.csv'
-file_out3   = 'c:\Users\User\iCloudDrive\daily_out.csv'
-file_out4   = 'c:\Users\User\Dropbox\daily_out.csv'
 
 # Get the current script's directory
 current_dir = File.dirname(__FILE__)
@@ -22,16 +17,13 @@ output_dir = File.join(current_dir, '..', 'Data')
 file_in = File.join(input_dir, "daily-sales.csv")
 
 # Construct the file path to the output file
-file_out2 = File.join(output_dir, "daily_out.csv")
+file_out   = 'c:\ruby\port_lite\db\daily_out.csv'
 
 ary_inp = []
 ary_out = []
 ary_tmp = []
 diff = 0
 fo = File.open(file_out, "w")
-fo2 = File.open(file_out2, "w")
-fo3 = File.open(file_out3, "w")
-fo4 = File.open(file_out4, "w")
 fi = File.open(file_in, "r")
 
 # ary_inp[0] = name
@@ -185,10 +177,7 @@ fi.each do |line|
     if (ary_out[4] != '-')
         out_line = ary_out.join(',')
         out_line = out_line + "\n"
-        fo.write out_line
-        fo2.write out_line   
-        fo3.write out_line   
-        fo4.write out_line   
+        fo.write out_line  
 
         printf "%-8s %10s %10s %6.2f %6.2f %7s %10d %6.2f %6.2f %s %6s\n",
         ary_out[0],ary_out[1],ary_out[2],ary_out[3],ary_out[4],
@@ -197,10 +186,14 @@ fi.each do |line|
     sleep(1)
 end
 fo.close
-fo2.close
-fo3.close
-fo4.close
 fi.close
+
+
+# Copy the file "example.txt" from the source directory to the destination directory
+FileUtils.cp(file_out, "c:\\Users\\User\\OneDrive\\A7\\Data\\daily_out.csv")
+FileUtils.cp(file_out, "c:\\Users\\User\\OneDrive\\Documents\\obsidian-git-sync\\Data\\daily_out.csv")
+FileUtils.cp(file_out, "c:\\Users\\User\\iCloudDrive\\daily_out.csv")
+FileUtils.cp(file_out, "c:\\Users\\User\\Dropbox\\daily_out.csv")
 
     # ary_out[0] = name
     # ary_out[1] = from date
