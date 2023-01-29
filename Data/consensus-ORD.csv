@@ -1,6 +1,5 @@
 name,price,target_price,upside,buy,hold,sell,market,sector,subsector,dly_vol,beta,yield
-CK,23.7,30.11,27.05,3.0,0.0,0.0,SET100 / SETCLMV    ,Property & Construction,Construction Services,167.92,0.82,1.7
-CKP,4.64,6.6,42.24,2.0,0.0,0.0,SET100 / SETCLMV / SETTHSI    ,Resources,Energy & Utilities,60.77,1.04,2.6
-CPF,24.1,31.35,30.08,2.0,0.0,0.0,SET50 / SETCLMV / SETHD / SETTHSI / SETWB    ,Agro & Food Industry,Food & Beverage,421.03,0.77,3.2
-GFPT,13.2,17.4,31.82,4.0,0.0,0.0,SETTHSI    ,Agro & Food Industry,Agribusiness,76.82,0.69,2.7
-MEGA,49.75,62.7,26.03,5.0,0.0,0.0,SET100 / SETCLMV / SETTHSI / SETWB    ,Services,Commerce,178.57,1.14,3.0
+CK,22.7,28.91,27.36,5.0,0.0,0.0,SET100 / SETCLMV    ,Property & Construction,Construction Services,160.86,0.81,1.8
+CKP,4.54,6.8,49.78,1.0,0.0,0.0,SET100 / SETCLMV / SETTHSI    ,Resources,Energy & Utilities,55.97,1.05,3.1
+COM7,31.25,39.35,25.92,2.0,0.0,0.0,SET50 / SETTHSI / SETWB    ,Services,Commerce,538.47,1.49,3.4
+CPF,23.6,30.98,31.27,9.0,1.0,0.0,SET50 / SETCLMV / SETHD / SETTHSI / SETWB    ,Agro & Food Industry,Food & Beverage,442.47,0.77,3.2
