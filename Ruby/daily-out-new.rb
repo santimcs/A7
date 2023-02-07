@@ -73,9 +73,11 @@ fi.each do |line|
     ary_out[1] = ary_inp[1]
     # from price 
     ary_out[3] = ary_inp[3] 
-    ary_out[2] = Date.parse(ary_inp[14])
+    ary_out[2] = ary_inp[14]
     puts ary_inp
-    puts ary_out[2]
+    puts '----------'
+    puts ary_out
+    puts '=========='
     # url = "http://classic.settrade.com/C04_01_stock_quote_p1.jsp?txtSymbol=#{stock_name}&ssoPageId=9&selectPage=1"
     # html_data = open(url).read
     # doc = Nokogiri::HTML(html_data)
@@ -119,7 +121,7 @@ fi.each do |line|
     # ary_tmp[2] = Prior
     # ary_tmp[4] = Open
     ary_tmp[6] = ary_inp[6] # max_price
-    ary_tmp[8] = ary_inp[7] # min_price
+    ary_tmp[7] = ary_inp[7] # min_price
     ary_tmp[13]= ary_inp[13]  # volume
 
     # ary_out[0] = name
