@@ -34,27 +34,27 @@ fi = File.open(file_in, "r")
 # ary_inp[5] = qty
 # ary_inp[6] = max price
 # ary_inp[7] = min price
-# ary_inp[8] = daily_volume
-# ary_inp[9] = percent
-# ary_inp[10] = status B,I,O,S
-# ary_inp[11] = price
-# ary_inp[12] = chg_amt
-# ary_inp[13] = volume
+# ary_inp[8] = percent
+# ary_inp[9] = status B,I,O,S
+# ary_inp[10] = price
+# ary_inp[11] = chg_amt
+# ary_inp[12] = volume
+# ary_inp[13] = date
 
 puts "Name      From Date    To Date   From     To     Pct     Shares    Max    Min S Action"
 fi.each do |line|
     ary_inp = line.split(",")
     stock_name = ary_inp[0]  
     fm_date = ary_inp[1]    
-    to_date = ary_inp[14]    
+    to_date = ary_inp[13]    
     fm_price_old = ary_inp[3].to_f
     to_price_old = ary_inp[4].to_f
     trend = to_price_old - fm_price_old 
     # trend = ary_inp[12].to_f 
     max_price_old = ary_inp[6].to_f
     min_price_old = ary_inp[7].to_f
-    status = ary_inp[10].strip
-    # ary_out[9] = ary_inp[9]
+    status = ary_inp[9].strip
+    ary_out[9] = ary_inp[9]
 
     # ary_out[0] = name
     # ary_out[1] = from date
@@ -73,11 +73,10 @@ fi.each do |line|
     ary_out[1] = ary_inp[1]
     # from price 
     ary_out[3] = ary_inp[3] 
-    ary_out[2] = ary_inp[14]
-    puts ary_inp
-    puts '----------'
-    puts ary_out
-    puts '=========='
+    ary_out[2] = ary_inp[13].strip
+    # puts ary_inp
+    # puts '----------'
+
     # url = "http://classic.settrade.com/C04_01_stock_quote_p1.jsp?txtSymbol=#{stock_name}&ssoPageId=9&selectPage=1"
     # html_data = open(url).read
     # doc = Nokogiri::HTML(html_data)
@@ -89,6 +88,7 @@ fi.each do |line|
     #     case i
   	#         when 2
   	# 	        ary_out[4] = element.text.strip # Last Trade
+  		        ary_out[4] = ary_inp[10] # Last Trade
     #         when 3
     #             diff = element.text.strip.to_f   # Price change  
     #         when 4
@@ -104,7 +104,7 @@ fi.each do |line|
     #         date_str, time_str = element.text.split(" ")
     #         #  puts date_str
     #         date_date = Date.parse(date_str)
-            # ary_out[2] = ary_inp[14]
+            ary_out[2] = ary_inp[13].strip
     #     end
     # end
     # tables = doc.css('table.table-info')
@@ -122,7 +122,7 @@ fi.each do |line|
     # ary_tmp[4] = Open
     ary_tmp[6] = ary_inp[6] # max_price
     ary_tmp[7] = ary_inp[7] # min_price
-    ary_tmp[13]= ary_inp[13]  # volume
+    ary_tmp[12]= ary_inp[12]  # volume
 
     # ary_out[0] = name
     # ary_out[1] = from date
@@ -140,7 +140,7 @@ fi.each do |line|
     # min price    
 	ary_out[8] = ary_tmp[7]
     #  No. of shares
-    ary_out[6] = strip_comma(ary_tmp[13])
+    ary_out[6] = strip_comma(ary_tmp[12])
 
 
     max_price_new = ary_out[7].to_f  
@@ -173,7 +173,7 @@ fi.each do |line|
         end    
     end
     if (action == 'Insert')
-        ary_out[1] = to_date
+        ary_out[1] = to_date.strip
         ary_out[3] = to_price_old
         ary_out[7] = max_price_new
         ary_out[8] = min_price_new
@@ -184,15 +184,18 @@ fi.each do |line|
     pct = pct / ary_out[3].to_f * 100
     ary_out[5] = pct.round(2)
 
-    if (ary_out[4] != '-')
+    # if (ary_out[4] != '-')
         out_line = ary_out.join(',')
         out_line = out_line + "\n"
         fo.write out_line  
-        puts out_line
+        # puts ary_out
+        # puts '=========='
+        # puts out_line
         printf "%-8s %10s %10s %6.2f %6.2f %7s %10d %6.2f %6.2f %s %6s\n",
+        # printf "%-8s %10s %10s %8s %8s %7s %10s %8s %8s %s %6s\n",
         ary_out[0],ary_out[1],ary_out[2],ary_out[3],ary_out[4],
         ary_out[5],ary_out[6],ary_out[7],ary_out[8],ary_out[9],ary_out[10]
-    end
+    # end
     sleep(1)
 end
 fo.close
