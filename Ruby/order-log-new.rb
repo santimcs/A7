@@ -190,7 +190,6 @@ fi.each do |line|
         ary_out[8] = ary_in[8] # Price Change        
         ary_out[9] = ary_in[9] # Percent Change    
         active = ary_in[10].to_i                     
-        # ary_out[10] = ary_in[2]  # spreads
         ary_out[10] = ary_in[10].to_i
         ary_out[11] = ary_in[11].strip
 
