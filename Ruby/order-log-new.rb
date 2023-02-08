@@ -154,28 +154,8 @@ file_out = File.join(output_dir, "orders-log.csv")
 # Construct the file path to the input file
 file_in = File.join(input_dir, "Price-for-Order.csv")
 
-# ary_in[0] = Trade          
-# ary_in[1] = Stock Name 
-# ary_in[2] = Qty
-# ary_in[3] = Price  
-# ary_in[4] = Active 
-# ary_in[5] = Reason
-# ary_in[6] = Market
-# ary_in[7] = xdate
 ary_in = []
 ary_out = []
-# ary_out[0] = Trade          
-# ary_out[1] = Stock Name 
-# ary_out[2] = Number of Spreads
-# ary_out[3] = Reason    
-# ary_out[4] = Market    
-# ary_out[5] = Qty
-# ary_out[6] = Order Price 
-# ary_out[7] = Last Trade          
-# ary_out[8] = Price Change
-# ary_out[9] = Percent Change
-# ary_out[10] = Active      
-# ary_out[11] = xdate
 
 order_price = 0
 last_trade = 0
@@ -209,39 +189,17 @@ fi.each do |line|
         ary_out[7] = ary_in[7] # Last trade
         ary_out[8] = ary_in[8] # Price Change        
         ary_out[9] = ary_in[9] # Percent Change    
-        # active = ary_out[10].to_i                     
+        active = ary_in[10].to_i                     
         # ary_out[10] = ary_in[2]  # spreads
-        ary_out[10] = 0  # active
+        ary_out[10] = ary_in[10].to_i
         ary_out[11] = ary_in[11].strip
-  
-        # url = "http://classic.settrade.com/C04_01_stock_quote_p1.jsp?txtSymbol=#{stock_name}&ssoPageId=9&selectPage=1"
-        # html_data = open(url).read
-        # doc = Nokogiri::HTML(html_data)
-
-        # elements = doc.xpath("//h1")
-
-        # i = 0
-        # elements.each do |element|
-
-        #     i += 1		
-        #     case i
-
-        #         when 2
-        #             ary_out[7] = element.text.strip   # Last trade     
-        #             last_trade = element.text.strip   # Last trade                                 
-        #         when 3
-        #             ary_out[8] = element.text.strip # Price Change
-        #         when 4
-        #             ary_out[9] = element.text.strip  # Percent Change
-                    
-        #     end
-
-        # end
 
         ary_out[2] = number_of_spread(ary_in[7].to_f,ary_in[6].to_f)
-        if ary_out[2].abs >= 10
-            ary_out[10] = 1
-        end 
+        if (active != 2)
+            if (ary_out[2] <= -10 or ary_out[2] >= 10)
+                ary_out[10] = 0
+            end 
+        end
         out_line = ary_out.join(',') 
         out_line += "\n"
         puts out_line
@@ -251,7 +209,6 @@ fi.each do |line|
     end
 
     jjj += 1
-    sleep(1)
 
 end
 
