@@ -135,15 +135,13 @@ def number_of_spread(minp,maxp)
     return spreads
 end
 
-# file_in   = '..\data\orders.csv'
-# file_out   = '..\data\orders-log.csv'
-# file_out2   = 'C:\Users\User\Dropbox\orders-log.csv'
-
 # Get the current script's directory
 current_dir = File.dirname(__FILE__)
 #puts current_dir
 # Construct the file path to the input folder
+# input_dir = File.join(current_dir, '..', 'Data')
 input_dir = File.join(current_dir, '..', 'Data')
+
 #puts input_dir
 # Construct the file path to the output folder
 output_dir = File.join(current_dir, '..', 'Data')
@@ -168,7 +166,7 @@ fi = File.open(file_in, "r")
 fi.each do |line|
 
     if (jjj == 0) # 1st record of orders.csv is header
-        hdr_line ='trade,name,spd,reason,market,qty,target,current,change,percent,active,xdate' + "\n"
+        hdr_line ='trade,name,spd,reason,market,qty,target,current,change,%change,active,xdate' + "\n"
         fo.write hdr_line
         # fp.write hdr_line
         puts hdr_line
@@ -214,4 +212,4 @@ end
 fi.close
 fo.close
 
-FileUtils.cp(file_out, "c:\\Users\\User\\OneDrive\\Documents\\obsidian-git-sync\\Data\\orders-new.csv")
+FileUtils.cp(file_out, "c:\\Users\\User\\OneDrive\\Documents\\obsidian-git-sync\\Data\\orders-log.csv")
