@@ -195,6 +195,8 @@ fi.each do |line|
         if (active != 2)
             if (ary_out[2] <= -10 or ary_out[2] >= 10)
                 ary_out[10] = 0
+            else
+                ary_out[10] = 1
             end 
         end
         out_line = ary_out.join(',') 
