@@ -161,7 +161,7 @@ def summarize_prices(input_file, output_file)
         header = %w[name fm_date to_date days fm_price to_price diff pct spd avg max_price min_price trend nbr ttl_qty].join(',')
         puts header
 
-        CSV.foreach(input_file) do |row|
+        CSV.foreach(input_file, headers: true) do |row|
             nbr = nbr + 1
             if previous_row.nil? # process for 1st row
                 start_date = row[1]
