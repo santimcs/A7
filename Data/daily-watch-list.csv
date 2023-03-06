@@ -1,2 +1,3 @@
 name,%chg_acc,status,fm_price,to_price,market,fm_date,bdays,max_price,min_price
-JMART,-10.74,I,37.25,33.25,SET50,2023-02-03,7,37.75,33.0
+RCL,5.88,B,29.75,31.5,SET100,2023-02-20,8,32.5,29.25
+WICE,4.85,O,10.3,10.8,SET,2023-02-27,3,10.9,10.3
