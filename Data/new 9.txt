@@ -1,0 +1,9 @@
+In the Stock Exchange of Thailand (SET), the minimum price increment, or tick size, is determined based on the stock's price range. The tick sizes for stocks listed on the SET are as follows:
+
+For stocks priced below 10 THB (Thai Baht), the tick size is 0.01 THB.
+For stocks priced between 10 THB and 24.99 THB, the tick size is 0.02 THB.
+For stocks priced between 25 THB and 99.99 THB, the tick size is 0.05 THB.
+For stocks priced between 100 THB and 199.99 THB, the tick size is 0.10 THB.
+For stocks priced between 200 THB and 499.99 THB, the tick size is 0.25 THB.
+For stocks priced at 500 THB and above, the tick size is 0.50 THB.
+These tick sizes apply to both the bid and ask prices for stocks listed on the Stock Exchange of Thailand. When trading Thai stocks, you should adhere to these tick size rules when placing orders to ensure they are executed correctly.

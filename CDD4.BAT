@@ -1,0 +1,1 @@
+ruby ruby\candidate.rb 4

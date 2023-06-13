@@ -1,0 +1,1 @@
+ruby ruby/stock_inq.rb

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV Data Viewer</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container my-4">
+    <h2>CSV Data</h2>
+    <div class="table-responsive">
+      <table class="table table-striped" id="data-table">
+      </table>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+
+  <!-- Papa Parse library for CSV -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+
+  <script>
+    window.onload = function() {
+      // fetch CSV data
+      fetch('Price-Sample.csv')
+        .then(response => response.text())
+        .then(csvString => {
+          // Parse CSV to JSON
+          const data = Papa.parse(csvString, { header: true, skipEmptyLines: true }).data;
+          const table = document.getElementById('data-table');
+
+          // Create table header
+          let thead = document.createElement('thead');
+          let headerRow = document.createElement('tr');
+          Object.keys(data[0]).forEach(key => {
+            let th = document.createElement('th');
+            th.textContent = key;
+            headerRow.appendChild(th);
+          });
+          thead.appendChild(headerRow);
+          table.appendChild(thead);
+
+          // Create table body
+          let tbody = document.createElement('tbody');
+          data.forEach(row => {
+            let tr = document.createElement('tr');
+            Object.values(row).forEach(val => {
+              let td = document.createElement('td');
+              td.textContent = val;
+              tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
+          });
+          table.appendChild(tbody);
+        })
+        .catch(err => console.error(err));
+    };
+  </script>
+</body>
+
+</html>

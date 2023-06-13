@@ -1,0 +1,1 @@
+importPrice.bat
