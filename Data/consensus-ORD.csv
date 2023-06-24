@@ -1,5 +1,4 @@
 name,kind,year,quarter,_merge
-AWC,1.0,2023.0,1.0,left_only
 BBL,1.0,2023.0,1.0,left_only
 BDMS,1.0,2023.0,1.0,left_only
 BEM,1.0,2023.0,1.0,left_only
@@ -9,11 +8,12 @@ FPT,1.0,2023.0,2.0,left_only
 ICHI,1.0,2023.0,1.0,left_only
 KKP,1.0,2023.0,1.0,left_only
 KTB,1.0,2023.0,1.0,left_only
-KTC,1.0,2023.0,1.0,left_only
 LANNA,1.0,2023.0,1.0,left_only
 LHFG,1.0,2023.0,1.0,left_only
 OISHI,1.0,2023.0,2.0,left_only
 PTG,1.0,2023.0,1.0,left_only
 PTTEP,1.0,2023.0,1.0,left_only
+SAPPE,1.0,2023.0,1.0,left_only
 TASCO,1.0,2023.0,1.0,left_only
+TFFIF,1.0,2023.0,2.0,left_only
 TTB,1.0,2023.0,1.0,left_only
