@@ -1,0 +1,13 @@
+To make your PC use the internet from your iPhone, you can follow these steps:
+
+1. Ensure that your iPhone has a stable internet connection, either through cellular data or Wi-Fi.
+
+2. On your iPhone, enable Personal Hotspot by going to Settings > Personal Hotspot. Toggle the switch to enable it and set a Wi-Fi password if prompted.
+
+3. On your PC, make sure Wi-Fi is enabled and search for available networks. Your iPhone's Personal Hotspot should appear in the list of available networks.
+
+4. Select your iPhone's Personal Hotspot network and enter the Wi-Fi password you set earlier.
+
+5. Once connected, your PC should be able to use the internet through your iPhone's cellular data or Wi-Fi connection.
+
+Note: Keep in mind that using your iPhone's Personal Hotspot may consume cellular data if you're not connected to Wi-Fi. Additionally, some cellular carriers may have limitations or additional charges for using Personal Hotspot, so it's recommended to check with your carrier for any specific details or restrictions.

@@ -1,0 +1,98 @@
+In this quick tutorial, I'm going to show you how to install GPT engineer and run it from
+ the command line. We're going to install git, Python, VS Code. You'll also need your 
+ OpenAI API key, and then I'll show you how to put it all together and run GPT engineer 
+ from the command line.
+
+Now let's go to Google and type download git. Go to the first search result and on this 
+page click on it till download for Windows button. Look no further than the very first 
+link on this page saying click here to download the latest version of git. Simply go 
+through the installation steps by clicking the next button.
+
+GPT engineer runs on Python, so we need to download Python. Let's go to Google and type 
+download Python. Let's go ahead and go to the first search result link and here just 
+click on this yellow button. Once the file finishes downloading, click and install Python.
+ Now make sure to memorize the folder where you're installing it. In this case, I 
+ installed it to C:\Python3.
+
+Now once you've installed Python, click on the start button and just start typing in 
+environment variables then press enter or click on the open Button then just click on 
+environment variables. Here in the second box below, scroll down and find a variable 
+called path. Click on the edit button. Now here you need to add Python's installation 
+folder which as you remember was C:\Python3. You might also need to add Python3 scripts. 
+If you don't see these folders on the list, click on the new button and add it yourself. 
+So if for example, you installed Python to your program files folder, simply make sure 
+that it's correctly specified here. Now click on the OK button then OK again and OK.
+
+Now go to the start button, type CMD, hit enter, and on the command line type Python3 
+--version. If you see an error, you need to set up your environment variables properly. 
+But if you see the actual Python version, then it's ready to execute GPT engineer.
+
+Now next is an optional step. You can use any editor, but I'm going to go ahead and 
+download VS Code. Go to the first search result, here just click on the download link for
+ your operating system. Mine is Windows, so I'm going to go with that. Once the file 
+ finishes downloading, simply click on it and go through the installation process.
+
+Now let's go back to Google and type OpenAI sign up. The fastest way to find the API key 
+links is it's right here. So once you have your OpenAI account, go to this API Keys page.
+ If you can't find it, go to the upper right corner here and click view your API Keys. 
+ Click on the create new secret key button. Now this is your only opportunity to copy the
+ key. OpenAI will not show it to you again, so just make sure to paste it somewhere like 
+ notepad or some similar place. We're gonna need it in the next step.
+
+Go to Google and type GPT engineer to access GPT engineer project. Go to this first link.
+ We're going to copy the GitHub link to this project, so go to the green button and copy 
+ this link over here.
+
+Now open your command prompt again, go to your C drive and start typing mkdir GPT. This 
+is going to create a folder called GPT on our C drive and then type CD for a change 
+directory followed by GPT and press enter. Now because we installed git in the previous 
+step, we can issue the git command from the command line. If the git command generates 
+an error, you need to make sure to addthe installation path to git to your environment 
+variables just the same way like we did with Python in an earlier step. So just go ahead 
+and type git clone, right-click the cursor and paste that link we copied earlier from the
+ GPT engineer git project. Just press enter and this will install GPT engineer on your 
+ computer.
+
+Now go ahead and open your favorite editor. I'm going to open VS Code that we installed 
+earlier. Go to file, open folder, then navigate to this folder we just created from the 
+command line which was C:\GPT and here it is. Click on GPT engineer one time and click on
+ the open folder button. This opens GPT Engineers source code in our Visual Studio code.
+
+Now here go to terminal and select new terminal and this might work but VS Code has 
+multiple terminals so just to make sure I'm going to select on this dropdown git bash. 
+If you don't have that installed, you might still be able to run it from the regular 
+terminal or just do it from the command line we used previously with the CMD prompt 
+running from the start button.
+
+Now I'm going to test if I have pip installed properly. pip version. If the pip command 
+is not going to work in the next step, you might want to do it with pip3 command. Now on 
+my computer both pip and pip3 point to the same Python environment so I'm just going to 
+use the regular pip command.
+
+Now what you want to type next is install -r requirements.txt. This is going to install 
+additional Python modules required by GPT engineer project. So just press enter and the 
+modules will be downloaded and installed.
+
+Now remember that OpenAI key we had in our notepad. So just go ahead and copy your OpenAI
+ API key and in the command prompt start typing export then all uppercase letters 
+ OPENAI_API_KEY equals and then right-click the cursor to paste your API key and press 
+ enter.
+
+Now to build a new code base for something we're going to create a new folder. MKDIR 
+snake. Running this command will create a new GPT engineer code base project. So click on
+ the folder we just created, right-click and create a new file. Name this file main_prompt
+ Now this is the main prompt so to create a snake game in JavaScript for example I'll 
+ type create a snake game in JavaScript.
+
+Now to run this GPT engineer project type python3 then -m GPT_engineer.Main and the name 
+of our folder created which was a snake. Now if you get no module named typer error go 
+ahead and type pip install typer. If that still doesn't work you just have to juggle 
+around your Python environments and here instead of Python3 I'm just going to change that
+ to just Python and run it again.
+
+So chat GPT engineer will start executing your main prompt. Now to see your generate code
+ base go to snake workspace and all output txt and there's also JavaScript.
+
+I don't need you to like this video or subscribe to my channel. What you can do to help others is if you run into an error with anything during the installation of GPT engineer just post a comment so other people can see and hopefully if somebody else finds a solution they will post a comment as well.
+
+And this tutorial is just me installing GPT engineer for the first time and as you can see it worked but if you run into an error please post a comment.

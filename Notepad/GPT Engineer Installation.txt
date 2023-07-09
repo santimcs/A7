@@ -1,0 +1,80 @@
+Hi everyone, welcome to the channel. Today I will quickly share with you step by step how
+ to install GPT engineer on a Windows operating system. What is GPT engineer? GPT 
+ engineer is an open source project available on GitHub. It allows us to build apps, 
+ games, websites, and a lot more from a single text prompt that you supply. GPT Engineers
+ are autonomous AI agents like Auto GPT but it's focused on code-based creation. 
+
+First, we will run through a step-by-step procedure to install GPT engineer on Windows. 
+After that, I will quickly demonstrate how to use GPT engineer to build and run your first
+ project. To install GPT engineer, you will need at minimum the following software 
+ installed on Windows. First, let's go ahead and download. Let's head over to get for 
+ windows.org and let's download the installer. Next, go to the python website and then 
+ download the latest version for Windows. Lastly, to fulfill the minimum requirements, 
+ you need to head over to code.visualstudio.com forward slash download and grab the 
+ latest copy of the visual studio code for Windows. 
+
+Now that we have all the software, go ahead and install git and you can accept all the 
+defaults. Next, install Python and when the installer launches make sure that you select 
+this checkbox to add python to the path. Before we start building GPT engineer, let's 
+install the visual studio code and here we can accept all the defaults. We installed 
+quite a bit of software on the machine so at this stage, it might not be a bad idea to 
+quickly cycle power to this machine and just reboot it. 
+
+Now let's start building GPT engineer. First, open up a command prompt but then create a 
+folder where you can clone GPT engineer into. Now head over to the GitHub page, the link 
+is in the description. You want to click on the code button and copy the link to this 
+repo. Now let's clone the repo into the folder we created. Type git clone and paste the 
+link you copied. This should create a folder called GPT Dash engineer and there you can 
+see it. Let's enter this folder. We will now use Pub to set up all the requirements for 
+GPT engineer. Run the following command pep spice install spice Dash e space period and 
+submit that. Just double check that they will now install errors and we are ready to 
+proceed to the next step. 
+
+We will next require an API key from openai.com. So head over to platform.openi.com, 
+click on create new secret key and we'll call this GPT and engineer. Create key and 
+let's copy that. Head back here command prompt again and we are now going to set the 
+open AI key the GPT engineer must use. Execute the following set command. Now before we 
+start using GPT engineer to produce code for us it might be wise to open Windows Explorer.
+ Open your folder and just get an idea of the layout of the land. Take note of the GPT 
+ underscore engineer folder. If you enter that you'll see most of the Python scripts that
+ the program will be using. 
+
+GPT engineer also comes with a sample program that we can build. So if we browse one 
+level up and we go into the project folder, enter into the example folder and here you 
+will find the default prompt that comes with GPT engineer. Open up this prompt in an 
+editor and you'll see this prompt allows us to build the snow game. There are quite a 
+couple of demonstrations on the snake game so I think we're gonna go ahead and check us 
+out to build something new. Go ahead and copy this prompt. We'll be using this to 
+construct our first program. 
+
+Now let's head back tothe command prompt. Now we want to enter the directory where the 
+Python scripts reside. Now let's go ahead and create our first project. Run the following
+ command python spacemine.py space in this case my website and replace that with whatever
+ you want to call your project that you want to create. After executing the command, 
+ you'll see that GPT Engineers complaining and it's saying that the prompt is missing. 
+
+Now let's head back to Windows Explorer and you'll notice in the GPT underscore engineer 
+folder it's created our project for all the year. So let's go ahead and enter this folder
+ we have it and paste the prompt to be copied earlier into this folder. Open this prompt 
+ in your favorite editor. Let's clear out the sample prompt and we'll construct our first
+ prompt that we want GPT engineer to build for us. I've crafted the following prompt and 
+ this is just to keep it relatively simple for the build process. So with this prompt, 
+ I'm tasking GPT engineer to construct a single web page in HTML for me created with text
+ built by AI written in Black created on a white background and create a button with the 
+ word subscribe on it in yellow. 
+
+So let's go ahead and save this prompt and now if the prompt in place correctly we can 
+head back to our Command Prompt and re-execute the python script to build this project. 
+Let's execute this and see where GPT engineer comes up with. Now GPT Engineers asking us 
+for further clarification to construct the web page correctly and it's asking us things like should the heading be centered on the page, what should be the size of the heading, should the button be placed below the heading or anywhere. So let's go ahead and input our clarification. I want the adding a center on the page, make adding size 30 and place the button in the middle of the page. Let's submit that and see what GPT engineer comes up with. 
+
+And GPT Engineers now successfully built my webpage for me. It's now asking me if it 
+should open it. I'm just gonna go ahead and say no here. Now Define any project that GPT 
+engineer created open your Windows Explorer again go to the project directory created and
+ enter the workspace folder and here we are presented with the HTML file GPT engineer 
+ created. Let's go ahead and open that up and as requested it's bullet heading for me 
+ built by AI in black white background with a subscribe button in the middle and GPT 
+ Engineers done exactly what I've asked for. 
+
+If you find any value in this video please consider subscribing and check the channel for
+ future videos on technology and AI. Thank you.

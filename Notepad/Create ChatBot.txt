@@ -1,0 +1,77 @@
+What's going on guys.
+In this video I'm going to show you step by step how to build an AI chat bot using 
+node.js and the chat GPT API with the GPT 3.5 turbo model.
+You'll essentially have chat gbt running in your terminal.
+I have the program running and I can send any request I want to the API.
+I'll just say hello and we get hello how can I assist you today.
+I'm just going to say what is the capital of Florida and it's going to give me back the 
+capital of Florida is Tallahassee.
+The way that we're going to write this code is so it we save our chat history and we send
+ that with each request that way we can have an ongoing conversation.
+I should be able to say what is the population and it should know what I'm talking about.
+As of 21 population of Tallahassee blah blah blah so it knows that I'm referencing what I 
+just asked.
+You can also ask for like code samples.
+I'll say how do I write a fetch request in JavaScript and it does take a second.
+To make a fetch request in JavaScript you use the fetch function and it gives us an 
+example and then it tells us what the example does.
+I could easily copy this and put it into my my own code and I could ask questions about 
+it I could reference it in any way.
+You can just have this open on your desktop and if you need information on whatever you 
+can just go ahead and prompt it.
+To exit we just type exit and there we go so now we're out of the program.
+We're going to use the official open AI library for node.js.
+We're going to use a prep package called re-line sync which allows us to prompt the user.
+We'll also be using dot EnV to store our API key and then colors to give you know give us
+ colors in the console.
+This is the final code this is the repository I'll have the link to this in the 
+description.
+That's it let's go ahead and get into it thank you.
+I have an empty folder called chat gbt chat bot.
+The first thing we're going to do is in this folder we're going to run npm and knit which
+ will initialize a package.json file.
+Now as far as dependencies go let's say npm install and open AI is the the library we're 
+going to be using to make our request to chat chat GPT.
+I'm also going to install readline Dash sync that's going to allow us to interact with 
+the user and ask a question and we can answer and so on basically give us that 
+conversation uh that conversation flow.
+We're going to install dot EnV so that we can store our AP API key in that and then I'm 
+also going to install colors which is optional but it does look better when there's you 
+know different colors so you can tell who the user is and who the bot is.
+Now I'm going to open up my package.json here and I'm going to just add a start script 
+you can run it with you know node index or we can run npm start.
+Another thing I'm going to do is add a type module because I want to use es modules 
+instead of using the common JS syntax.
+Now that we've done that let's create our index.js which is our entry point.
+The first thing we have to do is is get our API key.
+You just want to get your key whether you have a free account or a paid account you can 
+go right here view API keys and you can create a new key.
+What you're going to do with that is come to your application and create in the root here
+ a DOT EnV file and this is where your your global environment variables will go.
+We're going to start by importing a few things from the openai library.
+We need to get our API key and in order to use dot EnV we have to call the config method.
+
+We want to create a configuration object.
+We need to take this configuration object and we need to pass it into a new instance of 
+this here.
+We're ready to make requests with this object.
+We're going to create a very actually you know what since we're using we're going to use 
+a method on this object called create chat completion and that's a synchronous so we need 
+to use the sync await.
+We're going to create an async function and we'll call it Main.
+We're going to call that function down here.
+We're going to create a variable called chat completion.
+We're going to pass in a couple things so pass in an object with the model the model that 
+we're using is gpt-3.5 Dash Turbo.
+We're also going to pass in messages and this is going to be an array now we're only 
+sending one message but you can send multiple messages so it still has to be an array 
+even though it's just one message.
+It's going to have two things a row and in this case the role is user because we're the 
+one making the request the user when we get a response back the role of that response will 
+be assistant because that's the API.
+We want to send the content of whatever we want to say to basically to chat GPT.
+I'm just going to say what is the capital of Massachusetts.
+Let's see what that gives us.
+This is what it gives us a whole bunch of stuff up here that we don't really need to pay 
+attention to but in this data object there's the ID there's the the model and then the 
+choices is really what we want to pay attention to because that's that's where

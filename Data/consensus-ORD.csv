@@ -1,5 +1,4 @@
 name,kind,year,quarter,_merge
-BBL,1.0,2023.0,1.0,left_only
 BDMS,1.0,2023.0,1.0,left_only
 BEM,1.0,2023.0,1.0,left_only
 BH,1.0,2023.0,1.0,left_only
@@ -14,5 +13,4 @@ PTG,1.0,2023.0,1.0,left_only
 PTTEP,1.0,2023.0,1.0,left_only
 SAPPE,1.0,2023.0,1.0,left_only
 TASCO,1.0,2023.0,1.0,left_only
-TFFIF,1.0,2023.0,2.0,left_only
 TTB,1.0,2023.0,1.0,left_only

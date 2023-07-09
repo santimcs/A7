@@ -1,0 +1,61 @@
+GPT Engineers are capable of writing entire website with just a single prompt.
+In this video I will show you how to install it on your local PC and how to use it.
+This will be a complete step-by-step guide ensuring that you won't face any problems.
+So the first question in your mind might be what is GPT engineer.
+Well, GPT engineer is similar to Auto GPT but instead of generating text it creates an entire code base for you.
+Now here's the mind-blowing part with GPT engineer.
+You don't need to be a coding prodigy or spend countless hours writing lines of code.
+All you have to do is provide a text prompt with your project idea and this AI genius will ask you questions to clarify the details.
+Once it's Crystal Clear on what you want to build it starts generating the entire code base for you.
+Talk about a developer's dream come true.
+Alright now let's get into the installation process.
+To get started with GPT engineer you'll need a few things.
+First make sure you have git installed on your system.
+Next you'll need the latest version of python the programming language that powers GPT engineer.
+If you don't have python installed yet no worries I'll guide you through the process.
+Once you have git and python all set up we need to get ourselves a code editor.
+Visual Studio code is an excellent choice as it provides a user-friendly environment for coding and debugging.
+Plus it has some cool extensions that can enhance your productivity.
+So make sure to grab that editor and have it ready to roll.
+Now here comes the crucial part you need to register for an open AI account and log in.
+OpenAI is the brilliant team behind GPT engineer and they're the ones making this AI magic happen.
+Once you're logged in it's time to generate your very own gpt4 API key.
+This key will give you access to the incredible power of gpt4 and enable you to create mind-blowing projects with GPT engineer.
+Alright folks now that we have all the necessary prerequisites covered it's time to dive into the installation process.
+Head over to the GitHub repository for GPT engineer and clone it to your local machine.
+Don't worry if you're not familiar with Git I've got your back.
+I'll guide you through the process step by step so you'll have GPT engineer ready to roll in no time.
+Once you've cloned the repository navigate to the directory in your command line interface.
+From there it's time to install the required dependencies.
+This will ensure that GPT engineer has all the necessary tools and libraries to work its magic.
+Don't worry if it takes a little bit of time trust me it's worth the wait.
+Now here's the secret sauce you need to set up your openai API key.
+Remember that API kiwi generated earlier.
+This is where it comes into play.
+By linking your API key with GPT engineer you're granting it access to the incredible power of gpt4.
+This is what makes the magic happen so make sure you follow the instructions carefully to get everything set up properly.
+Alright we're almost there.
+It's time to create a new project.
+Think of it as a canvas where you'll paint your coding masterpiece.
+Give your project a catchy name and a brief description.
+Remember the more details you provide the better GPT engineer can understand your vision.
+Now let's fill in the main prompt.
+This is where you Unleash Your creativity and describe what you want to build.
+Be as detailed as possible but don't worry if you're not a Wordsmith.
+GPT engineer will ask you questions to clarify any missing pieces and ensure it understands your project requirements.
+It's like having an AI teammate that never misses a beat.
+And now my friends it's time to witness the magic.
+Run main py space your project anim and watch as GPT engineer generates your entire code base based on your prompt and the clarifications you provided.
+And there you have it folks.
+Here you can see our project is ready.
+Now let's run our calculator app.
+You can see our calculator running perfectly.
+So what are you waiting for.
+Dive into the world of GPT engineer.
+Explore its capabilities and let your coding imagination run wild.
+I can't wait to see the amazing projects you'll create.
+If you enjoyed this video and want to see more content like this don't forget to smash that like button and leave a comment down below.
+And of course subscribe to the channel and hit the Bell icon so you never miss any of our exciting Tech Adventures.
+Thanks for watching.
+Keep coding keep exploring and I'll catch you in the next video.
+Stay awesome.
