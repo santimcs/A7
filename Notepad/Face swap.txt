@@ -1,0 +1,112 @@
+hi everyone so I've got good news it's here.
+you can finally take your face and put it into a mid-journey image.
+and I'm not talking about using Photoshop or like uploading a selfie and re-rolling 3 000
+ times and hoping you get lucky.
+no this is all done in mid-journey and it is super easy.
+so check it out this is an image of Indiana Jones.
+The Prompt here was cinematic still 1940s pulp hero Indiana Jones just called him right 
+out jungle Adventure aspect ratio 16 9.
+and now me as Indiana Jones which is definitely fulfilling some sort of lifelong 
+childhood fantasy of mine.
+hey just noticed short rounds back there.
+all right buckle up we're going for a ride.
+so this is Insight face which is an open source library for 2D and 3D face analysis.
+if you haven't worked with plugins yet don't stress it's super simple and I'm gonna walk 
+you through everything.
+the first thing you'll want to do is create a new server in Discord it's very easy to do 
+I'm going to very briefly explain it.
+you just come down and hit this add a server button that'll create a pop-up create your 
+own server just put for me and my friends it's really just for you.
+and then name it whatever you want in this case we're going to call it uh inside face 
+insightface.
+you don't need to upload a picture but you can if you want to hit create and you're 
+pretty much done.
+you will then want to click on the link that I left below uh which will pop up a browser 
+window that looks like this.
+all you have to do is add it to your server in this case uh we do go down to Insight face
+ and hit continue.
+after going through a human check you should be authorized and you can close this window 
+down and head back over to Discord.
+you'll also want to invite the mid Journey bot over to your new server otherwise your 
+forward slash imagine commands aren't going to do anything.
+to do that just head over to Mid Journey go into any one of the rooms where images are 
+being created in this case I'm just in newbies 50.
+find the mid Journey bot who never sleeps over on the sidebar right click on them hit 
+profile and then add to server here.
+and now it's the same process you just add the mid Journey bot to your new server hit 
+continue hit continue to get or authorize again and off we go.
+the next thing we'll need to do is give the Insight bot a face to swap um.
+so you do so by creating an ID so just come down to General and forward slash save ID 
+which will give you a prompt to upload an image.
+trying to be as ethical as I can about this I'm just going to use an image of myself.
+this is the profile pic that I generally kind of always use.
+this was just taken on an iPhone at one of those like selfie stand things um.
+it was actually taken by my daughter.
+you can see that the background is actually just a backdrop so but I usually crop it in 
+it works fine.
+so let's load that into Insight face.
+at that point you're going to need to name your character um.
+it can be anything that you want.
+I'm just going to say me.
+apparently the character limit is eight um.
+so if you've got a much longer name just shorten it down hit enter and you can see ID 
+name me has been created.
+so at this point you're ready to just start generating images.
+as a quick FYI the documentation states that that the image that you supply to Insight 
+phase should be forward-facing.
+you should not be wearing glasses and they don't want bangs.
+I don't know apparently bangs kind of screw something up.
+so they also say high quality.
+that profile pic image that I used has been crunched down a couple of times uh via 
+compression and it's not the greatest quality but it still seems to work.
+but you know obviously if you can aim for the highest quality image that you can get.
+so continuing on with childhood fantasies uh here is Cinematic still Superman flying in 
+the air with an aspect ratio of 16 9.
+obviously it very much leans into Henry Cavill uh and the Zack Snyder Superman.
+so all we have to do from here is choose one of the images and upscale it.
+I'm going to pick that third one because that looks sort of the most realistic in terms 
+of face and skin tone.
+once it's upscaled we just come over to these three dots over here come down to apps and 
+run in swapper.
+and after a moment here you go.
+yeah this looks really really good slightly just disturbing for me.
+but from a technical standpoint it looks very good.
+the skin tones are consistent the lighting stays consistent.
+this is something that would take like a pretty significant amount of time to do in 
+Photoshop.
+here we did it in I think it generated in about like less than a minute like I would say 
+40 seconds or so.
+okay let's take a look at a few more and then I'm going to show you a few limitations.
+for this test I was kind of aiming for a royal tannenbaums feel.
+so I prompted cinematic still Wes Anderson film Ben Stiller wearing a jogging suit with 
+an aspect ratio of 16 9.
+and got something that relatively looks like you know Ben Stiller in the Royal 
+tannenbaums.
+running Insight face gets us this image which does look like me in a Wes Anderson movie 
+super weird.
+I also decided to hilariously run photograph male dark hair heavy weightlifter gym 
+massive barbell big muscles at an aspect ratio of 16 9.
+and got this monstrous piece of meat.
+and insight phase gives us this which cracks me up.
+I actually sent a picture of this over to my wife and she just wrote back no.
+so I wanted to test to see if you could do more than just photographic images with this 
+as well.
+so I prompted highly detailed painting style by Andrew Wyeth.
+Andrew Wyeth being the painter who did The Fairly famous Christina's World painting.
+a farmer in a rural field with an aspect ratio of 16 9.
+and got this which looks very much in line with an Andrew Wyeth painting.
+so let's run the face swap on that and we get this which works and also gives me a slight sense of existential dread um.
+but yeah that really works.
+I will have more hair than that when I get to that age I will.
+that last image actually weirded me out so much that I just rolled young farmer.
+and got this image and running face swap on that got us this which is actually equally as disturbing in my opinion um.
+this is like this boy has seen some hard times some very hard times.
+there are limits when you're working with an illustrative style though uh.
+for example in this one I went with illustrative style male cyberpunk hero intense gays City street.
+and then actually in previous roles it was giving me a lot of song glasses which I didn't want.
+so I did no glasses sunglasses.
+and this is the image that we got.
+running inside face gets us this which looks good.
+I mean it does look like me as some like 80s cyberpunk hero um.
+but if you look uh the skin tones are definitely much more in a photo-ish tone.
+whereas the original definitely had much more of an illustrative brush stroke style to it
