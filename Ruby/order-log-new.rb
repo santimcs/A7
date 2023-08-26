@@ -117,7 +117,7 @@ fi.each do |line|
         ary_out[11] = ary_in[11].strip
 
         ary_out[2] = spreads_between(ary_in[7].to_f,ary_in[6].to_f)
-        if (active != 2)
+        if (active == 0)
             if (ary_out[2] <= -10 or ary_out[2] >= 10)
                 ary_out[10] = 0
             else

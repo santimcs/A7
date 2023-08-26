@@ -1,8 +1,1 @@
 ,name,yield,price,target,upside,buy,hold,sell,score,mrkt,sector,subsector,volume,beta
-2,KKP,6.6,70.25,85.58,22,10,3,0,33,SET100,Financials,Banking,515.68,0.84
-3,SPALI,6.2,24.0,28.07,17,10,1,0,31,SET100,Property & Construction,Property Development,182.54,0.72
-0,PTT,6.1,33.25,41.04,23,6,0,1,15,SET50,Resources,Energy & Utilities,1451.32,0.89
-4,AP,5.8,11.6,14.33,24,7,0,0,21,SET100,Property & Construction,Property Development,193.44,0.8
-1,TU,5.3,16.2,22.17,37,11,1,0,34,SET50,Agro & Food Industry,Food & Beverage,362.4,0.73
-5,MAJOR,5.3,18.3,22.95,25,4,0,0,12,SET999,Services,Media & Publishing,61.02,0.65
-6,ICHI,5.2,11.9,14.28,20,4,0,0,12,SET999,Agro & Food Industry,Food & Beverage,58.56,1.72

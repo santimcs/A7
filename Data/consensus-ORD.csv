@@ -1,16 +1,21 @@
-name,kind,year,quarter,_merge
-BDMS,1.0,2023.0,1.0,left_only
-BEM,1.0,2023.0,1.0,left_only
-BH,1.0,2023.0,1.0,left_only
-EA,1.0,2023.0,1.0,left_only
-FPT,1.0,2023.0,2.0,left_only
-KKP,1.0,2023.0,1.0,left_only
-KTB,1.0,2023.0,1.0,left_only
-KTC,1.0,2023.0,1.0,left_only
-LANNA,1.0,2023.0,1.0,left_only
-LHFG,1.0,2023.0,1.0,left_only
-OISHI,1.0,2023.0,2.0,left_only
-PTTEP,1.0,2023.0,1.0,left_only
-SAPPE,1.0,2023.0,1.0,left_only
-TASCO,1.0,2023.0,1.0,left_only
-TTB,1.0,2023.0,1.0,left_only
+name,market,merge_1
+BBL,SET50 / SETHD / SETTHSI,left_only
+BEM,SET50 / SETTHSI / SETWB,left_only
+BH,SET50 / SETCLMV / SETWB,left_only
+CK,SET100 / SETCLMV / SETTHSI,left_only
+CPN,SET50 / SETTHSI,left_only
+DELTA,SET,left_only
+HANA,SET100 / SETTHSI,left_only
+ICHI,sSET / SETCLMV,left_only
+III,sSET,left_only
+KTB,SET50 / SETHD / SETTHSI,left_only
+M,SETWB,left_only
+PCSGH,SET,left_only
+PSH,SETTHSI,left_only
+PTTEP,SET50 / SETCLMV / SETHD / SETTHSI,left_only
+QH,SET100 / SETHD,left_only
+SAPPE,sSET,left_only
+SC,sSET / SETTHSI,left_only
+SIRI,SET / SETTHSI,left_only
+TOA,SETTHSI,left_only
+TTB,SET50 / SETHD / SETTHSI,left_only
