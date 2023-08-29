@@ -10,7 +10,6 @@ ICHI,sSET / SETCLMV,left_only
 III,sSET,left_only
 KTB,SET50 / SETHD / SETTHSI,left_only
 M,SETWB,left_only
-PCSGH,SET,left_only
 PSH,SETTHSI,left_only
 PTTEP,SET50 / SETCLMV / SETHD / SETTHSI,left_only
 QH,SET100 / SETHD,left_only
