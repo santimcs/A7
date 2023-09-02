@@ -1,10 +1,11 @@
 ,date,amount,item,kind
-0,2023-07-31,200,Food,Food
-1,2023-07-31,10000,Parent,Parent
-2,2023-07-31,640,Internet Home,Communication
-3,2023-07-31,420,Netflix,Edutainment
-4,2023-07-31,320,Telephone Dtac,Communication
-5,2023-07-31,170,Google,Edutainment
-6,2023-07-31,140,Apple,Edutainment
-7,2023-07-31,710,ChatGPT,Edutainment
-8,2023-07-31,1050,MidJourney,Edutainment
+0,2023-08-31,190,Food,Food
+1,2023-08-31,10000,Parent,Parent
+2,2023-08-31,640,Internet Home,Communication
+3,2023-08-31,420,Netflix,Edutainment
+4,2023-08-31,320,Telephone Dtac,Communication
+5,2023-08-31,170,Google,Edutainment
+6,2023-08-31,100,Apple,Edutainment
+7,2023-08-31,40,Apple,Edutainment
+8,2023-08-31,710,ChatGPT,Edutainment
+9,2023-08-31,1050,MidJourney,Edutainment
