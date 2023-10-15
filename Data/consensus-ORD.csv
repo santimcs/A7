@@ -16,5 +16,4 @@ QH,SET100 / SETHD,left_only
 SAPPE,sSET,left_only
 SC,sSET / SETTHSI,left_only
 SIRI,SET / SETTHSI,left_only
-TOA,SETTHSI,left_only
 TTB,SET50 / SETHD / SETTHSI,left_only

@@ -51,7 +51,8 @@ fi.each do |line|
 
         i += 1
         target_price = element.text
-        ary_out[i] = element.text
+        # ary_out[i] = element.text
+        ary_out[1] = element.text
 
     end
 
